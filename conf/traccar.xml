@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM 'http://java.sun.com/dtd/properties.dtd'>
+<properties>
+    <!-- Logger -->
+    <entry key='logger.level'>info</entry>
+    <entry key='logger.console'>true</entry>
+</properties>

@@ -13,6 +13,4 @@ build
 .vscode
 bin
 *.log
-
-## Traccar configuration files
-traccar.xml
+.env

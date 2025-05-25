@@ -1,6 +1,6 @@
 
 # Docker image settings
-DOCKER_IMAGE_NAME = khasty/traccar
+DOCKER_IMAGE_NAME = khasty720/traccar
 DOCKER_TAG = latest
 DOCKER_FULL_TAG = $(DOCKER_IMAGE_NAME):$(DOCKER_TAG)
 
@@ -16,11 +16,13 @@ docker-run:
 		--name traccar \
 		--hostname traccar \
 		--rm \
+		--env-file ./.env \
+		-p 5432:5432 \
 		-p 80:8082 \
 		-p 5200-5350:5000-5150 \
 		-p 5200-5350:5000-5150/udp \
 		-v ./logs:/opt/traccar/logs:rw \
-		-v ./traccar.xml:/opt/traccar/conf/traccar.xml:ro \
+		-v ./conf/traccar.xml:/opt/traccar/conf/traccar.xml:ro \
 		$(DOCKER_FULL_TAG)
 
 # Build and push Docker image
@@ -39,5 +41,5 @@ docker-compose-down:
 
 # Build the Java application
 java-debug:
-	@echo "Starting Java application with remote debugging enabled..."
-	java -Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=*:5005 -jar target/tracker-server.jar ./debug.xml
+	@echo "Running Java application in debug mode..."
+	./tools/run-debug-server.sh
