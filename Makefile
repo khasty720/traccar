@@ -39,7 +39,11 @@ docker-compose-down:
 
 .PHONY: docker-build docker-run docker-push docker-compose-up docker-compose-down
 
-# Build the Java application
-java-debug:
-	@echo "Running Java application in debug mode..."
+server-build:
+	@echo "Building server..."
+	./gradlew build
+
+# Run the server application
+server-debug:
+	@echo "Running server application in debug mode..."
 	./tools/run-debug-server.sh
