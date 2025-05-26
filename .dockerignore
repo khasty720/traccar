@@ -1,0 +1,58 @@
+# Version control
+.git
+.gitignore
+.github
+
+# Build artifacts
+target/
+build/
+dist/
+*.class
+*.jar
+!traccar.jar
+
+# Logs
+logs/
+*.log
+
+# Development environments
+.idea/
+.vscode/
+*.iml
+.eclipse/
+
+# Docker files
+Dockerfile
+.dockerignore
+docker-compose*.yml
+
+# Node modules (if any)
+node_modules/
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Documentation
+README.md
+CHANGELOG.md
+LICENSE
+docs/
+
+# Testing
+test/
+coverage/
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+# Gradle
+.gradle/
+gradle/
+gradlew
+gradlew.bat
+
+# Debug files
+*.debug
