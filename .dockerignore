@@ -3,14 +3,6 @@
 .gitignore
 .github
 
-# Build artifacts
-target/
-build/
-dist/
-*.class
-*.jar
-!traccar.jar
-
 # Logs
 logs/
 *.log
@@ -22,7 +14,6 @@ logs/
 .eclipse/
 
 # Docker files
-Dockerfile
 .dockerignore
 docker-compose*.yml
 
