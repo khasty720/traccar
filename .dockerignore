@@ -1,0 +1,49 @@
+# Version control
+.git
+.gitignore
+.github
+
+# Logs
+logs/
+*.log
+
+# Development environments
+.idea/
+.vscode/
+*.iml
+.eclipse/
+
+# Docker files
+.dockerignore
+docker-compose*.yml
+
+# Node modules (if any)
+node_modules/
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Documentation
+README.md
+CHANGELOG.md
+LICENSE
+docs/
+
+# Testing
+test/
+coverage/
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+# Gradle
+.gradle/
+gradle/
+gradlew
+gradlew.bat
+
+# Debug files
+*.debug
